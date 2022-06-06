@@ -112,12 +112,15 @@ async function aggregatefunc(request,report1){
 }
 
 async function fetchReport(request,response){
-    const report = mandiSchema.findOne({_id : request.params._id});
+    console.log(request.params.reportId);
+    const report = await mandiSchema.findOne({_id : String(request.params.reportId)});
+    console.log(report)
     response.status(200).json(report);
 }
 
 async function fetch(request,response){
-    const report = mandiSchema.find();
+    const report = await mandiSchema.find();
+    console.log(report)
     response.status(200).json(report);
 }   
 

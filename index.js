@@ -4,6 +4,7 @@ const app = express();
 require("dotenv/config");
 const dbfunc = require("./dbfunctions");
 const mandiSchema = require("./schemas/mandireport");
+const req = require("express/lib/request");
 
 const port = process.env.PORT || 1234;
 
@@ -32,6 +33,7 @@ app.post("/reports",async (request,response) => {
 
 
 app.get("/reports/:reportId", async (request,response)=>{
+    console.log(request.params.reportId);
     dbfunc.fetchReport(request,response);
 });
 
