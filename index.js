@@ -31,8 +31,12 @@ app.post("/reports",async (request,response) => {
 
 
 
-app.get("reports/:reportId", async (request,response)=>{
+app.get("/reports/:reportId", async (request,response)=>{
     dbfunc.fetchReport(request,response);
+});
+
+app.get("/reports", async (request,response)=>{
+  dbfunc.fetch(request,response);
 });
 
 app.listen(port, () => console.log(`Server up and running...at ${port}`))

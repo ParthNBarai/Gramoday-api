@@ -116,4 +116,9 @@ async function fetchReport(request,response){
     response.status(200).json(report);
 }
 
-module.exports = {Reports,fetchReport}
+async function fetch(request,response){
+    const report = mandiSchema.find();
+    response.status(200).json(report);
+}   
+
+module.exports = {Reports,fetchReport,fetch}
