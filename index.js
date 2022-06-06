@@ -33,7 +33,7 @@ app.post("/reports",async (request,response) => {
 
 
 app.get("/reports/:reportId", async (request,response)=>{
-    console.log(request.params.reportId);
+    // console.log(request.params.reportId);
     dbfunc.fetchReport(request,response);
 });
 
