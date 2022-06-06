@@ -4,6 +4,21 @@ The only issue here is the users array is not getting updated after updating a d
 For your convenience I have hosted the database on MongoDB atlas and deployed the API on heroku so you can directly test it. Below are the details of URL:
 API url : https://gramodayapidemo.herokuapp.com/
 Post route for adding/updating a document : https://gramodayapidemo.herokuapp.com/reports (Post request)
+Demo request format:
+{
+"reportDetail": {
+"userID": "user-2",
+"marketID": "market-5",
+"marketName": "Vashi Navi Mumbai",
+"cmdtyID": "cmdty-18",
+"marketType": "Mandi",
+"cmdtyName": "Tomato",
+"priceUnit": "Pack",
+"convFctr": 6,
+"price": 112
+}
+}
+
 Get route for getting a specific doucment using ID : https://gramodayapidemo.herokuapp.com/reports/:reportId (:reportId to be replaced with actual id)
 Get route for fetching all the documents in the database: https://gramodayapidemo.herokuapp.com/reports (Get request)
 As of now in the database I have kept a few documents just for your convenience so you can get the id directly else you can create a post request and get the new id of the new document in response.
